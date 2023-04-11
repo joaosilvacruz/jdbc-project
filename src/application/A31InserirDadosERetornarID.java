@@ -2,13 +2,11 @@ package application;
 
 import db.DB;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-public class A3InserindoDados {
+public class A31InserirDadosERetornarID {
     public static void main(String[] args) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         Connection conn = null;
@@ -18,9 +16,11 @@ public class A3InserindoDados {
             conn = DB.getConnection();
             st = conn.prepareStatement(
                     "INSERT INTO seller "
-                    + "(Name, Email, BirthDate, BaseSalary, DepartmentId) "
-                    + "VALUES "
-                    + "(?, ?, ?, ?, ?)");
+                            + "(Name, Email, BirthDate, BaseSalary, DepartmentId) "
+                            + "VALUES "
+                            + "(?, ?, ?, ?, ?)",
+                    // Para retornar o ID é necessário acrescentar essa linha
+                    Statement.RETURN_GENERATED_KEYS);
 
             // o set possui dois parâmetros, i = número da posição da interrogação e s = valor
             st.setString(1, "Joao");
@@ -32,7 +32,16 @@ public class A3InserindoDados {
 
             // O comando abaixo realiza a atualização e retorna a quantidade de linhas alteradas
             int rowsAffected = st.executeUpdate();
-            System.out.println("Done! Rows affected: " + rowsAffected);
+
+            if (rowsAffected>0){
+                ResultSet rs = st.getGeneratedKeys();
+                while (rs.next()) {
+                    int id = rs.getInt(1);
+                    System.out.println("Done! Id = " + id);
+                }
+            } else {
+                System.out.println("No rows affected!");
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -43,7 +52,5 @@ public class A3InserindoDados {
             DB.closeStatement(st);
             DB.closeConnection();
         }
-
-
     }
 }

@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class A2RecuperandoDados {
+public class A2RecuperarDados {
     public static void main(String[] args) {
         // Preparando o banco, consulta e guardar a consulta
 

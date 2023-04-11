@@ -2,11 +2,13 @@ package application;
 
 import db.DB;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-public class A31InserindoDadosERetornandoID {
+public class A3InserirDados {
     public static void main(String[] args) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         Connection conn = null;
@@ -16,11 +18,9 @@ public class A31InserindoDadosERetornandoID {
             conn = DB.getConnection();
             st = conn.prepareStatement(
                     "INSERT INTO seller "
-                            + "(Name, Email, BirthDate, BaseSalary, DepartmentId) "
-                            + "VALUES "
-                            + "(?, ?, ?, ?, ?)",
-                    // Para retornar o ID é necessário acrescentar essa linha
-                    Statement.RETURN_GENERATED_KEYS);
+                    + "(Name, Email, BirthDate, BaseSalary, DepartmentId) "
+                    + "VALUES "
+                    + "(?, ?, ?, ?, ?)");
 
             // o set possui dois parâmetros, i = número da posição da interrogação e s = valor
             st.setString(1, "Joao");
@@ -32,16 +32,7 @@ public class A31InserindoDadosERetornandoID {
 
             // O comando abaixo realiza a atualização e retorna a quantidade de linhas alteradas
             int rowsAffected = st.executeUpdate();
-
-            if (rowsAffected>0){
-                ResultSet rs = st.getGeneratedKeys();
-                while (rs.next()) {
-                    int id = rs.getInt(1);
-                    System.out.println("Done! Id = " + id);
-                }
-            } else {
-                System.out.println("No rows affected!");
-            }
+            System.out.println("Done! Rows affected: " + rowsAffected);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -52,5 +43,7 @@ public class A31InserindoDadosERetornandoID {
             DB.closeStatement(st);
             DB.closeConnection();
         }
+
+
     }
 }
