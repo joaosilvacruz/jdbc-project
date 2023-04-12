@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cd932a4-1875-41fe-b7fe-88aa8d97b8f6" name="Changes" comment="criado: recuperar dados">
-      <change afterPath="$PROJECT_DIR$/src/application/A31InserindoDadosERetornandoID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/A3InserindoDados.java" afterDir="false" />
+    <list default="true" id="1cd932a4-1875-41fe-b7fe-88aa8d97b8f6" name="Changes" comment="atualizado: nomes das classes">
+      <change afterPath="$PROJECT_DIR$/src/db/DbIntegrityException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/A50DeletarDados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/A50DeletarDados.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +56,9 @@
       <recent name="$PROJECT_DIR$/.." />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A31InserindoDadosERetornandoID">
-    <configuration name="A1ConexaoComBanco" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="application.A1ConexaoComBanco" />
+  <component name="RunManager" selected="Application.A50DeletarDados">
+    <configuration name="A2RecuperarDados" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.A2RecuperarDados" />
       <module name="jdbc-project" />
       <extension name="coverage">
         <pattern>
@@ -70,8 +70,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A2RecuperandoDados" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="application.A2RecuperandoDados" />
+    <configuration name="A31InserirDadosERetornarID" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.A31InserirDadosERetornarID" />
       <module name="jdbc-project" />
       <extension name="coverage">
         <pattern>
@@ -83,8 +83,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A31InserindoDadosERetornandoID" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="application.A31InserindoDadosERetornandoID" />
+    <configuration name="A3InserirDados" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.A3InserirDados" />
       <module name="jdbc-project" />
       <extension name="coverage">
         <pattern>
@@ -96,8 +96,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A3InserindoDados" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="application.A3InserindoDados" />
+    <configuration name="A40AtualizarDados" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.A40AtualizarDados" />
+      <module name="jdbc-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="A50DeletarDados" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.A50DeletarDados" />
       <module name="jdbc-project" />
       <extension name="coverage">
         <pattern>
@@ -111,10 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.A31InserindoDadosERetornandoID" />
-        <item itemvalue="Application.A3InserindoDados" />
-        <item itemvalue="Application.A2RecuperandoDados" />
-        <item itemvalue="Application.A1ConexaoComBanco" />
+        <item itemvalue="Application.A50DeletarDados" />
+        <item itemvalue="Application.A40AtualizarDados" />
+        <item itemvalue="Application.A31InserirDadosERetornarID" />
+        <item itemvalue="Application.A3InserirDados" />
+        <item itemvalue="Application.A2RecuperarDados" />
       </list>
     </recent_temporary>
   </component>
@@ -129,7 +143,8 @@
       <workItem from="1680724819497" duration="1707000" />
       <workItem from="1680777128118" duration="356000" />
       <workItem from="1680791704701" duration="11560000" />
-      <workItem from="1681141583411" duration="1829000" />
+      <workItem from="1681141583411" duration="2180000" />
+      <workItem from="1681252832345" duration="2229000" />
     </task>
     <task id="LOCAL-00001" summary="deletado arquivo">
       <created>1680780911766</created>
@@ -159,7 +174,35 @@
       <option name="project" value="LOCAL" />
       <updated>1680807339742</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="criado: inserir dados">
+      <created>1681143763621</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681143763621</updated>
+    </task>
+    <task id="LOCAL-00006" summary="criado: atualizar dados">
+      <created>1681255028195</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681255028195</updated>
+    </task>
+    <task id="LOCAL-00007" summary="criado: deletar dados">
+      <created>1681255034318</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681255034318</updated>
+    </task>
+    <task id="LOCAL-00008" summary="atualizado: nomes das classes">
+      <created>1681255053169</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681255053169</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +225,10 @@
     <MESSAGE value="criado classe teste" />
     <MESSAGE value="config ambiente" />
     <MESSAGE value="criado: recuperar dados" />
-    <option name="LAST_COMMIT_MESSAGE" value="criado: recuperar dados" />
+    <MESSAGE value="criado: inserir dados" />
+    <MESSAGE value="criado: atualizar dados" />
+    <MESSAGE value="criado: deletar dados" />
+    <MESSAGE value="atualizado: nomes das classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="atualizado: nomes das classes" />
   </component>
 </project>
