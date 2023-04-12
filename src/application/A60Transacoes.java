@@ -27,10 +27,10 @@ public class A60Transacoes {
                     "WHERE DepartmentId = 1");
 
             //Interrompendo propositalmente a execução do programa
-            int x = 1;
-            if (x < 2) {
-                throw new SQLException("Fake error");
-            }
+//            int x =1;
+//            if (x < 2){
+//                throw new SQLException ("Fake Error!");
+//            }
 
             int rows2 = st.executeUpdate("UPDATE seller SET BaseSalary = 3900 " +
                     "WHERE DepartmentId = 2");
